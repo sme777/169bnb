@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+.search-container {
+    text-align: center;
+    padding-top: 2%;
+}
