@@ -1,0 +1,2 @@
+module BlueFoodsHelper
+end

@@ -7,11 +7,11 @@
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Beds to Bear</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Golden Stripes</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Bear necesseties</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Blue foods</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Other Services</a></li>
+        <li><a href="/" class="nav-link px-2 <%= type == "beds" ? "link-secondary" : "link-dark"%>">Beds to Bear</a></li>
+        <li><a href="/golden_stripes" class="nav-link px-2 <%= type == "stripes" ? "link-secondary" : "link-dark"%>">Golden Stripes</a></li>
+        <li><a href="/bear_necessities" class="nav-link px-2 <%= type == "necessities" ? "link-secondary" : "link-dark"%>">Bear necesseties</a></li>
+        <li><a href="/blue_foods" class="nav-link px-2 <%= type == "foods" ? "link-secondary" : "link-dark"%>">Blue foods</a></li>
+        <li><a href="/other_services" class="nav-link px-2 <%= type == "other" ? "link-secondary" : "link-dark"%>">Other Services</a></li>
     </ul>
 
     <div class="col-md-3 text-end">

@@ -1,0 +1,2 @@
+module BearBedsHelper
+end
