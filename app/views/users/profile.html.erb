@@ -1,0 +1,26 @@
+<!-- CSS Links-->
+<%= render "layouts/links" %>
+<!-- Scripts Links-->
+<%= render "layouts/scripts" %>
+<!-- Nanvar -->
+<%= render partial: "layouts/navbar"%>
+<!-- Messages-->
+<%= render "layouts/messages" %>
+<!-- Search -->
+<%
+=begin%>
+ <%= render partial: "layouts/search",  locals: {type: "beds"}%> 
+<%
+=end%>
+<!-- Start of Body -->
+<%
+=begin%>
+ <div class="background-container">
+    <%= image_tag "berkeley", class: "background-picture" %>
+</div> 
+<%
+=end%>
+<!-- End of Body -->
+<!-- Footer -->
+<%= render "layouts/footer" %>
+<%= javascript_pack_tag 'search'%>

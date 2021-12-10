@@ -1,22 +1,36 @@
 <div class="navbar-container">
-<header
-    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-            <use xlink:href="#bootstrap" /></svg>
-    </a>
+    <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" /></svg>
+        </a>
 
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/" class="nav-link px-2 <%= type == "beds" ? "link-secondary" : "link-dark"%>">Beds to Bear</a></li>
-        <li><a href="/golden_stripes" class="nav-link px-2 <%= type == "stripes" ? "link-secondary" : "link-dark"%>">Golden Stripes</a></li>
-        <li><a href="/bear_necessities" class="nav-link px-2 <%= type == "necessities" ? "link-secondary" : "link-dark"%>">Bear necesseties</a></li>
-        <li><a href="/blue_foods" class="nav-link px-2 <%= type == "foods" ? "link-secondary" : "link-dark"%>">Blue foods</a></li>
-        <li><a href="/other_services" class="nav-link px-2 <%= type == "other" ? "link-secondary" : "link-dark"%>">Other Services</a></li>
-    </ul>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 <%= type == "beds" ? "link-secondary" : "link-dark"%>">Beds to Bear</a>
+            </li>
+            <li><a href="/golden_stripes"
+                    class="nav-link px-2 <%= type == "stripes" ? "link-secondary" : "link-dark"%>">Golden Stripes</a>
+            </li>
+            <li><a href="/bear_necessities"
+                    class="nav-link px-2 <%= type == "necessities" ? "link-secondary" : "link-dark"%>">Bear
+                    necesseties</a></li>
+            <li><a href="/blue_foods" class="nav-link px-2 <%= type == "foods" ? "link-secondary" : "link-dark"%>">Blue
+                    foods</a></li>
+            <li><a href="/other_services"
+                    class="nav-link px-2 <%= type == "other" ? "link-secondary" : "link-dark"%>">Other Services</a></li>
+        </ul>
 
-    <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
-    </div>
-</header>
+        <div class="col-md-3 text-end">
+            <% if type != "auth" %>
+            <% if session[:user_id].nil?%>
+            <a href="/login" class="btn btn-outline-primary me-2">Login</a>
+            <a href="/signup" class="btn btn-primary">Sign-up</a>
+            <% else %>
+            <button type="button" class="btn btn-dark">profile</button>
+            <% end %>
+            <% end %>
+        </div>
+
+    </header>
 </div>

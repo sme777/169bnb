@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  # get '/other' => 'other_services#index'
-  # get '/foods' => 'blue_foods#index'
-  # get '/necessities' => 'bear_necessities#index'
-  # get '/stripes' => 'golden_stripes#index'
-  # get '/beds' => 'bear_beds#index'
   resources :bear_beds
   resources :bear_necessities
   resources :blue_foods
@@ -11,4 +6,11 @@ Rails.application.routes.draw do
   get '/other_services' => 'other_services#index'
   get '/search' => 'bear_beds#search', as: :search
   get '/' => redirect('/bear_beds'), as: :root
+
+  # authentication
+  get '/login' => 'users#login', as: :get_login
+  get '/signup' => 'users#signup', as: :get_signup
+
+  post '/login' => 'users#login', as: :login
+  post '/signup' => 'users#signup', as: :signup
 end

@@ -1,0 +1,32 @@
+<!-- CSS Links-->
+<%= render "layouts/links" %>
+<!-- Scripts Links-->
+<%= render "layouts/scripts" %>
+<!-- Nanvar -->
+<%= render partial: "layouts/navbar", locals: {type: "auth"} %> 
+<!-- Messages-->
+<%= render "layouts/messages" %>
+<!-- Search -->
+<!-- Start of Body -->
+<div class="log-in-container">
+<div class="log-in-title-container">
+    <h1>Log In to Bnb169</h1>
+</div>
+<%= form_with url: login_path, method: :post do |form| %>
+<div class="form-floating mb-3">
+  <%= form.text_field :email, class: "form-control", id: "login-email-field", placeholder: "name@example.com"%>
+  <label for="login-email-field"><strong>Email address</strong></label>
+</div>
+<div class="form-floating mb-3">
+  <%= form.text_field :password, class: "form-control", id: "login-password-field", placeholder: "password"%>
+  <label for="login-password-field"><strong>Password</strong></label>
+</div>
+<div class="form-floating">
+    <%= form.submit "Log In", class: "login-btn btn btn-primary btn-lg w-100"%>
+</div>
+<% end %>
+</div>
+<!-- End of Body -->
+<!-- Footer -->
+<%= render "layouts/footer" %>
+<%= javascript_pack_tag 'search'%>
