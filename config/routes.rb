@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :blue_foods
   resources :golden_stripes
   get '/other_services' => 'other_services#index'
-  get '/' => 'users#index', as: :root
+  get '/search' => 'bear_beds#search', as: :search
+  get '/' => redirect('/bear_beds'), as: :root
 end

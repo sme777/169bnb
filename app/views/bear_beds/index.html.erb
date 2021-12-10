@@ -4,6 +4,8 @@
 <%= render "layouts/scripts" %>
 <!-- Nanvar -->
 <%= render partial: "layouts/navbar", locals: {type: "beds"} %>
+<!-- Messages-->
+<%= render "layouts/messages" %>
 <!-- Search -->
 <%= render partial: "layouts/search",  locals: {type: "beds"}%>
 <!-- Start of Body -->
@@ -13,4 +15,4 @@
 <!-- End of Body -->
 <!-- Footer -->
 <%= render "layouts/footer" %>
-<%= javascript_pack_tag 'users'%>
+<%= javascript_pack_tag 'search'%>

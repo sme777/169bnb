@@ -1,0 +1,8 @@
+<div class="message-container">
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %> alert-dismissible fade show" role="alert">
+    <span class="mesage-value">You have the following errors: <%= value %></span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+</div>
